@@ -1,0 +1,230 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #e28687;
+  color: #fff;
+}
+a {
+  text-decoration: none;
+  display: block;
+}
+
+.loader{
+  width: 30%;
+  height: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%)
+}
+
+#root {
+  scroll-snap-type: y mandatory;
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  position: relative;
+}
+fieldset {
+  width: 100%;
+  height: 100vh;
+  scroll-snap-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.2rem;
+  /* per JS intersectionObserver */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out 0.2s;
+  border: none;
+}
+
+.container {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.fieldset-quiz {
+  width: 100%;
+  max-width: 600px;
+  padding: 1rem;
+  position: relative;
+}
+
+.form-check,
+.btn-next,
+.btn-prev,
+.btn-submit,
+.btn-start,
+.btn-start-again {
+  width: 100%;
+  height: fit-content;
+  background-color: rgb(229 146 147);
+  border: thin solid #fff;
+  border-radius: 5px;
+  margin-top: 1rem;
+  padding: 0.5rem 0.5rem;
+  color: inherit;
+  font-size: 1.1rem;
+  cursor: pointer
+}
+
+.form-check-label {
+  display: inline-block;
+  width: 90%;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+.btn-wrapper {
+  position: absolute;
+  bottom: 1rem;
+  right: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+}
+.icons-wrapper > * {
+  cursor: pointer;
+}
+.btn-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-submit {
+  visibility: visible;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility, opacity 1s ease-in-out 1s;
+  cursor: pointer;
+}
+.active {
+  opacity: 1;
+  visibility: visible;
+}
+.wrong-answer {
+  border: medium solid red;
+  border-radius: 5px;
+}
+.right-answer {
+  border: medium solid green;
+  border-radius: 5px;
+}
+.modal {
+  position: fixed;
+  /* width: 100%;
+  height: 100%; */
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  background-color: rgba(0,0,0,0.5)
+}
+.modal-article{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 600px;
+  z-index: 11;
+  background-color: rgb(229 146 147);
+  border: thin solid #fff;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.btn-close{
+  border: thick solid red;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: medium solid #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer
+}
+
+.home-form{
+  width: 100%;
+  max-width: 400px;
+  min-height: 200px;
+  border: thin solid #fff;
+  position: absolute; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 1rem;
+}
+.home-form label{
+  display: block;
+  text-align: center;
+}
+.home-form >*{
+  height: 100%;
+  padding: 1rem 0;
+}
+.home-form [class^="form"]{
+  border: thin solid #fff;
+  border-radius: 5px;
+}
+.home-form [class^="custom"]{
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 0.5rem auto 0
+}
+.home-form option{
+  text-align: center;
+}
+.number-questions-user{
+  text-align: center;
+  padding-top: 0.7rem;
+}
+select{
+  background-color: transparent;
+  border: thin solid #fff;
+  color: #fff;
+  padding: 0 1em 0 0;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+}
+select:focus{
+  outline: none;
+}
+select option{
+  background-color: transparent;
+  border: thin solid #fff;
+  color: #fff;
+}
+
+.none{
+  display: none
+}
