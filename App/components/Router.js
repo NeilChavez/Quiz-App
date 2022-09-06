@@ -12,7 +12,7 @@ export  function Router() {
   let options = null;
   
   if (localStorage.getItem("options")) {
-    JSON.parse(localStorage.getItem("options"));
+   options = JSON.parse(localStorage.getItem("options"));
   } else {
     options = {
       category: "Arts and Literature",
