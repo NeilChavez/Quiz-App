@@ -9,7 +9,18 @@ import { Loader } from "./Loader.js";
 
 export  function Router() {
   let { hash } = location;
-  let options = JSON.parse(localStorage.getItem("options"));
+  let options = null;
+  
+  if(localStorage.getItem('options)){
+      JSON.parse(localStorage.getItem("options"));
+  }else{
+    //default Options
+    options= {
+      category: "Arts and Literature",
+      difficulty: "easy",
+      quantity: 10
+    }
+  }
   let { category, difficulty, quantity } = options;
 
   const URL = `${api.QUESTIONS}${api.CATEGORIES}${category}&${api.LIMIT}${quantity}&${api.DIFFICULTY}${difficulty}`;
