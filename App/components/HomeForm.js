@@ -1,4 +1,4 @@
-import { OptionsCategories } from "./optionsCategories.js";
+import { OptionsCategories } from "./OptionsCategories.js";
 import api from "../helpers/api.js";
 import { OptionsDifficulty } from "./OptionsDifficulty.js";
 
