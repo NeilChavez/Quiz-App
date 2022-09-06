@@ -14,7 +14,6 @@ export  function Router() {
   if(localStorage.getItem('options)){
       JSON.parse(localStorage.getItem("options"));
   }else{
-    //default Options
     options= {
       category: "Arts and Literature",
       difficulty: "easy",
