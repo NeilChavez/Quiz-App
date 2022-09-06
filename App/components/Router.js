@@ -11,14 +11,14 @@ export  function Router() {
   let { hash } = location;
   let options = null;
   
-  if(localStorage.getItem("options")){
-      JSON.parse(localStorage.getItem("options"));
-  }else{
-    options= {
+  if (localStorage.getItem("options")) {
+    JSON.parse(localStorage.getItem("options"));
+  } else {
+    options = {
       category: "Arts and Literature",
       difficulty: "easy",
-      quantity: 10
-    }
+      quantity: 10,
+    };
   }
   let { category, difficulty, quantity } = options;
 
