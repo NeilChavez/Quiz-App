@@ -11,7 +11,7 @@ export  function Router() {
   let { hash } = location;
   let options = null;
   
-  if(localStorage.getItem('options)){
+  if(localStorage.getItem("options")){
       JSON.parse(localStorage.getItem("options"));
   }else{
     options= {
