@@ -1,10 +1,13 @@
 export function Modal(counter, totalQuestions) {
 
-  document.addEventListener("click",(e) => {
+   document.addEventListener("click",(e) => {
 
-      if (e.target.matches(".btn-close") || e.target.matches(".modal:not(.modal-article)"))
-      document.querySelector(".modal").remove();
-    }, { once: true}
+      if (e.target.matches(".btn-close") || e.target.matches(".modal:not(.modal-article)")){
+      const $modal = document.querySelector(".modal");
+      if(!$modal) return false;
+      $modal.remove();
+      }
+    }, 
   );
 
   return `
