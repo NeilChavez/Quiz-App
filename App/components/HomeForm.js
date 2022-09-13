@@ -38,7 +38,7 @@ export function HomeForm() {
         </div>
         
         <div class="form-select">
-            <label for="select-difficulty"> Number of Queastion</label>    
+            <label for="select-difficulty"> Difficulty</label>    
             <select id="select-difficulty" class="custom-select">
                 ${OptionsDifficulty(api.listDifficulty)}
             </select>
