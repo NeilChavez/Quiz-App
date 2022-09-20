@@ -94,7 +94,7 @@ fieldset {
 }
 .btn-wrapper {
   position: absolute;
-  bottom: 1rem;
+  bottom: 2.5rem;
   right: 0.5rem;
   display: flex;
   gap: 0.5rem;
@@ -227,4 +227,11 @@ select option{
 
 .none{
   display: none
+}
+
+@media (min-width: 768px) { 
+
+  .btn-wrapper {
+    bottom: 1rem;
+  }
 }
