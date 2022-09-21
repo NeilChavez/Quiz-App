@@ -1,15 +1,16 @@
 export function Modal(counter, totalQuestions) {
-
-  document.addEventListener("click",(e) => {
-
-      if (e.target.matches(".btn-close") || e.target.matches(".modal:not(.modal-article)")){
-      const $modal = document.querySelector(".modal");
+const handlerClick = (e) => {
+  
+  if (e.target.matches(".btn-close") || e.target.matches(".modal:not(.modal-article)")){
+    const $modal = document.querySelector(".modal");
       if(!$modal) return false;
-      $modal.open = false;
-      $modal.remove();
-      }
-    }, 
-  );
+        $modal.open = false;
+        $modal.remove();
+        return document.removeEventListener('click', handlerClick);
+  }
+} 
+
+  document.addEventListener("click", handlerClick);
 
   return `
     <dialog class="modal" open>     

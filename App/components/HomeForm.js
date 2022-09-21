@@ -3,30 +3,38 @@ import api from "../helpers/api.js";
 import { OptionsDifficulty } from "./OptionsDifficulty.js";
 
 export function HomeForm() {
-  document.addEventListener("submit", (e) => {
+  const handleSubmit = (e) => {
+
     if (e.target.matches(".home-form")) {
       e.preventDefault();
       location.hash = "#question-0";
       const $category = document.getElementById("select-categories"),
         $difficulty = document.getElementById("select-difficulty"),
         $quantity = document.getElementById("range-questions");
-        
+
       const options = {
         category: $category.value,
         difficulty: $difficulty.value,
         quantity: $quantity.value,
       };
-
       localStorage.setItem("options", JSON.stringify(options));
+
+      document.removeEventListener("submit", handleSubmit);
+      document.removeEventListener("input", handleInput);
     }
-  });
-  document.addEventListener("input", (e) => {
+  };
+
+  const handleInput = (e) => {
+
     if (e.target.matches("#range-questions")) {
       let numberQuestions = document.querySelector(".number-questions-user"),
         rangeQuestions = document.getElementById("range-questions");
       numberQuestions.textContent = rangeQuestions.value;
     }
-  });
+  };
+
+  document.addEventListener("submit", handleSubmit);
+  document.addEventListener("input", handleInput);
 
   return `
      <form class="home-form"> 
