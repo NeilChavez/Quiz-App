@@ -53,7 +53,7 @@ export function HomeForm() {
         </div>
         <div class="form-range">
             <label for="range-questions">Number of Questions </label>
-            <input type="range" min="0" max="20" id="range-questions" value="10" class="custom-range">
+            <input type="range" min="1" max="20" id="range-questions" value="10" class="custom-range">
             <div class="number-questions-user">10</div>
         </div>
         <div>
