@@ -12,9 +12,6 @@ The user can choose between several categories, difficulty and number of questio
 
 Finally, once the user has answered, the App tells the user how many questions he/she answered correctly and which are the correct answers.
 
-<<<<<<< HEAD
-A demo is here: [link](https://quiz-app-git-main-neilchavez.vercel.app/)
 
-=======
 A demo is here: [Quiz App](https://quiz-app-git-main-neilchavez.vercel.app/)
->>>>>>> fbaa0c5d44b0c45e3402a43863f683c3facaff28
+
