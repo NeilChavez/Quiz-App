@@ -4,7 +4,6 @@
 This is an __App Quiz__.
 
 ![ScreenshotOne](./App/assets/Screenshot-22-10-02.png)
-![ScreenshotTwo](./App/assets//Screenshot-22-10-02-two.png)
 
 
 
