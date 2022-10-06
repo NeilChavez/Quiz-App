@@ -18,7 +18,7 @@ a {
   display: block;
 }
 
-.loader{
+.loader {
   width: 30%;
   height: 30%;
   margin-left: auto;
@@ -27,7 +27,7 @@ a {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%)
+  transform: translate(-50%, -50%);
 }
 
 #root {
@@ -83,7 +83,7 @@ fieldset {
   padding: 0.5rem 0.5rem;
   color: inherit;
   font-size: 1.1rem;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .form-check-label {
@@ -133,9 +133,9 @@ fieldset {
   width: 100vw;
   height: 100vh;
   z-index: 10;
-  background-color: rgba(0,0,0,0.5)
+  background-color: rgba(0, 0, 0, 0.5);
 }
-.modal-article{
+.modal-article {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -143,14 +143,14 @@ fieldset {
   width: 100%;
   max-width: 600px;
   z-index: 11;
-  background-color: rgb(229 146 147);
+  background-color: #E59293;
   border: thin solid #fff;
   color: #fff;
   text-align: center;
   padding: 2rem 0;
 }
 
-.btn-close{
+.btn-close {
   border: thick solid red;
   width: 2rem;
   height: 2rem;
@@ -162,15 +162,15 @@ fieldset {
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer
+  cursor: pointer;
 }
 
-.home-form{
+.home-form {
   width: 100%;
   max-width: 400px;
   min-height: 200px;
   border: thin solid #fff;
-  position: absolute; 
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -179,32 +179,32 @@ fieldset {
   align-items: stretch;
   padding: 1rem;
 }
-.home-form label{
+.home-form label {
   display: block;
   text-align: center;
 }
-.home-form >*{
+.home-form > * {
   height: 100%;
   padding: 1rem 0;
 }
-.home-form [class^="form"]{
+.home-form [class^='form'] {
   border: thin solid #fff;
   border-radius: 5px;
 }
-.home-form [class^="custom"]{
+.home-form [class^='custom'] {
   display: block;
   width: 100%;
   max-width: 300px;
-  margin: 0.5rem auto 0
+  margin: 0.5rem auto 0;
 }
-.home-form option{
+.home-form option {
   text-align: center;
 }
-.number-questions-user{
+.number-questions-user {
   text-align: center;
   padding-top: 0.7rem;
 }
-select{
+select {
   background-color: transparent;
   border: thin solid #fff;
   color: #fff;
@@ -216,21 +216,54 @@ select{
   cursor: inherit;
   line-height: inherit;
 }
-select:focus{
+select:focus {
   outline: none;
 }
-select option{
+select option {
   background-color: transparent;
   border: thin solid #fff;
   color: #fff;
 }
 
-.none{
-  display: none
+.picker-color {
+  border: 1px solid #fff;
+  border-radius: 0.5rem;
+  width: 10rem;
+  height: 2.5rem;
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  z-index: 10;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+[class^='color'] {
+  border: inherit;
+  border-radius: 0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
 }
 
-@media (min-width: 768px) { 
+[class$='green'] {
+  background-color: #53b983;
+}
+[class$='yellow'] {
+  background-color: #eca83f ;
+}
+[class$='blue'] {
+  background-color: #428b8e;
+}
+[class$='rosa'] {
+  background-color: #E59293;
+}
 
+.none {
+  display: none;
+}
+
+@media (min-width: 768px) {
   .btn-wrapper {
     bottom: 1rem;
   }
