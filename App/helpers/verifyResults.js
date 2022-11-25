@@ -25,9 +25,6 @@ export function verififyResults(correctAnswer, totalQuestions) {
         });
       });
 
-
-
-
         let timeOut = setTimeout(() => {
           $root.insertAdjacentHTML( "afterbegin", Modal(rightAnswersCounter, totalQuestions));
           clearTimeout(timeOut)
