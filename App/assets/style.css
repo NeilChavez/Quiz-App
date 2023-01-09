@@ -1,9 +1,7 @@
 :root {
-  --color-rose: #e28687;
-  --color-blue: #5ea6c3;
-  --color-orange: #d67c63;
-  --color-yellow: #beb366;
-  --color-rosa-secundary: #e59293;
+  --color-blue-sea: #194752;
+  --color-yellow: #a09342;
+  --color-violet: #764069;
 }
 html {
   box-sizing: border-box;
@@ -17,8 +15,10 @@ body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background-color: var(--color-rose);
+  background-color: var(--color-blue-sea);
   color: #fff;
+  font-weight: 300;
+  transition: background-color 0.3s ease-in;
 }
 a {
   text-decoration: none;
@@ -83,7 +83,7 @@ fieldset {
 .btn-start-again {
   width: 100%;
   height: fit-content;
-  background-color: rgb(229 146 147);
+  background-color: inherit;
   border: thin solid #fff;
   border-radius: 5px;
   margin-top: 1rem;
@@ -140,7 +140,7 @@ fieldset {
   width: 100vw;
   height: 100vh;
   z-index: 10;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 .modal-article {
   position: absolute;
@@ -150,7 +150,7 @@ fieldset {
   width: 100%;
   max-width: 600px;
   z-index: 11;
-  background-color: #e59293;
+  background-color: inherit;
   border: thin solid #fff;
   color: #fff;
   text-align: center;
@@ -233,8 +233,6 @@ select option {
 }
 
 .picker-color {
-  border: 1px solid #fff;
-  border-radius: 0.5rem;
   width: 10rem;
   height: 2.5rem;
   position: fixed;
@@ -245,6 +243,10 @@ select option {
   justify-content: space-evenly;
   align-items: center;
 }
+.picker-color > div{
+  border: thin solid white;
+  border-radius: 3px;
+}
 [class^='color'] {
   border: inherit;
   border-radius: 0.5rem;
@@ -253,17 +255,14 @@ select option {
   cursor: pointer;
 }
 
-[class$='green'] {
-  background-color: #53b983;
+[class$='violet'] {
+  background-color: var(--color-violet);
 }
 [class$='yellow'] {
-  background-color: #eca83f;
+  background-color: var(--color-yellow);
 }
 [class$='blue'] {
-  background-color: #428b8e;
-}
-[class$='rosa'] {
-  background-color: #e59293;
+  background-color: var(--color-blue-sea);
 }
 
 .none {
